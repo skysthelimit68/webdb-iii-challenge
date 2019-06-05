@@ -22,6 +22,7 @@ function findById(id) {
     .from('students')
     .innerJoin('cohorts', 'students.cohort_id', 'cohorts.id')
     .where({ 'students.id' : id})
+    .first()
     
     /*return db.select('students.id', 'students.name', 'cohorts.name')
     .from('students')

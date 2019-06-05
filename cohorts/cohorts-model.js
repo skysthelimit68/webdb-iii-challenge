@@ -55,4 +55,3 @@ function findCohortStudents(id) {
     .where({ 'cohort_id': id })
 }
 
-//select * from students inner join cohorts on students.cohortId = cohorts.id

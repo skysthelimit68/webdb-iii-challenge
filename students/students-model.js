@@ -17,26 +17,28 @@ function find() {
 }
 
 function findById(id) {
-    /*return db
-    .select('students.id', 'students.name', 'cohorts.name')
+    return db
+    .select('students.id', 'students.name', 'cohorts.name as cohort')
     .from('students')
     .innerJoin('cohorts', 'students.cohort_id', 'cohorts.id')
-    .where({ 'students.cohort_id' : id})
-    */
+    .where({ 'students.id' : id})
+    
     /*return db.select('students.id', 'students.name', 'cohorts.name')
     .from('students')
     .innerJoin('cohorts', function() {
         this.on('students.cohort_id', '=', 'cohorts.id')
     })
-    .where({ cohort_id: id })*/
+    .where({ student.id: id })*/
+    /*
     return db('students')
     .where( { id })
     .first()
+    */
     /*
     return db.select(['students.id', 'students.name', 'cohorts.name'])
     .from('students')
     .innerJoin('cohorts', 'cohorts.id', 'students.cohort_id')
-    .where('student.cohort_id', id)
+    .where('student.id', id)
     */
     /*
     return db('students')
@@ -48,7 +50,7 @@ function findById(id) {
     from students as s
     innerjoin cohorts as c
     on s.cohort_id = c.id
-    where s.cohort_id = id
+    where s.id = id
 */
 
 }
